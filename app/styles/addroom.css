@@ -1,0 +1,49 @@
+.modal {
+    font-family: 'Roboto';
+    position: fixed;
+    background-color: darkgray;
+    opacity: .95;
+    height: 250px;
+    text-align: center;
+    margin-left: 18%;
+    margin-top: 75px;
+}
+
+.modal-title {
+    margin-top: 40px;
+    font-size: 30px;
+    opacity: .6;
+}
+
+.modal-body {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+    opacity: .6;
+}
+
+.create-room, .cancel {
+    display: inline;
+    border: none;
+    padding: 10px 27px;
+    background-color: white;
+    margin: 5px 5px;
+}
+
+.create-room {
+    float: left;
+}
+
+.create-room:hover, .cancel:hover {
+    background-color: cornflowerblue;
+    opacity: .7;
+    cursor: pointer;
+    color: white;
+}
+
+#input {
+    height: 30px;
+    width: 220px;
+    margin: 10px 0 5px 3px;
+}
+

@@ -1,7 +1,10 @@
 <section class="chat-rooms container">
-    <h3>Bloc Chat</h3>
-    <div class="chat-room-list" ng-repeat="chat_room in rooms.roomList">
-        <a ui-sref="#">{{chat_room.$value}}</a>
+    <div class="chat-links">
+        <h2>Bloc Chat</h2>
+        <button class="add-room" ng-click="rooms.open()">Add Room</button>
+        <div class="chat-room-list" ng-repeat="chat_room in rooms.roomList">
+            <a ui-sref="#">{{chat_room.$value}}</a>
+        </div>
     </div>
     
     <div class="main"></div>

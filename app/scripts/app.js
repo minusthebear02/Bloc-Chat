@@ -1,7 +1,6 @@
 (function() {
     function config($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home');
-//        $urlRouterProvider.when('', '/home');
         
         $stateProvider
             .state('home', {
@@ -9,9 +8,16 @@
             controller: 'RoomListCtrl as rooms',
             templateUrl: 'templates/home.html'
         })
+        
+        $stateProvider
+            .state('addroom', {
+            url: '/home/addroom',
+            controller: 'AddRoomCtrl',
+            templateUrl: 'templates/addroom.html'
+        })
     }
     
     angular
-        .module('blocChat', ['ui.router', 'firebase'])
+        .module('blocChat', ['ui.router', 'ui.bootstrap', 'firebase'])
         .config(config);
 })();

@@ -7,14 +7,49 @@ body {
     position: absolute;
     float: left;
     font-family: 'Roboto';
-    width: 190px;
+    width: 210px;
     height: 100%;
     background-color: lightgray;
     text-align: left;
     padding-left: 15px;
-    opacity: .7;
+    
+}
+
+.chat-links {
+    margin-top: 10px;
+}
+
+.chat-rooms h2 {
+    display: inline;
+    opacity: .6;
 }
 
 .chat-room-list {
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.chat-room-list a {
+    cursor: pointer;
+    opacity: .4;
+}
+
+.chat-room-list a:hover {
+    color: cornflowerblue;
+    opacity: .6;
+}
+
+button.add-room {
+    cursor: pointer;
+    margin-left: 10px;
+    border: none;
+    background-color: whitesmoke;
+    padding: 10px;
+    opacity: .7;
+}
+
+button.add-room:hover {
+    color: white;
+    background-color: cornflowerblue;
+    opacity: .4;
+    
 }
