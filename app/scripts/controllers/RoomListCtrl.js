@@ -1,6 +1,18 @@
 (function() {
-    function RoomListCtrl($rootScope, $uibModal, $scope, Room) {
+    function RoomListCtrl($rootScope, $uibModal, $scope, Room, Message) {
         this.roomList = Room.all;
+        
+        this.activeRoom = {};
+        
+        this.activeMessages = null;
+        
+        this.selectRoom = function(roomName) {
+            
+            this.activeRoom = roomName;
+            this.activeMessages = Message.getByRoomId(this.activeRoom.$id);
+        };
+        
+        
         
         this.open = function() {
             $rootScope.modalInstance = $uibModal.open({
@@ -9,7 +21,7 @@
               ariaDescribedBy: 'modal-body',
               templateUrl: 'templates/addroom.html',
               controller: 'AddRoomCtrl',
-              contollerAs: 'addroom'
+              controllerAs: 'addroom'
 
             });
         };
@@ -17,5 +29,5 @@
     
     angular
         .module('blocChat')
-        .controller('RoomListCtrl', ['$rootScope', '$uibModal', '$scope','Room', RoomListCtrl]);
+        .controller('RoomListCtrl', ['$rootScope', '$uibModal', '$scope', 'Room', 'Message', RoomListCtrl]);
 })();

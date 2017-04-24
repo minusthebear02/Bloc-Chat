@@ -9,10 +9,7 @@
         return {
             all: rooms,
             addRoom: function(name) {
-                var newObj = {};
-                var num = rooms.length + 1;
-                newObj[num] = name;
-                rooms.$add(newObj[num]);
+                rooms.$add(name);
             }
             
         };

@@ -3,9 +3,28 @@
         <h2>Bloc Chat</h2>
         <button class="add-room" ng-click="rooms.open()">Add Room</button>
         <div class="chat-room-list" ng-repeat="chat_room in rooms.roomList">
-            <a ui-sref="#">{{chat_room.$value}}</a>
+            <a ng-click="rooms.selectRoom(chat_room)">{{chat_room.$value}}</a>
         </div>
     </div>
     
-    <div class="main"></div>
+   
+</section>
+
+<section class="chat-messages container">
+     <div class="chatroom">
+        <div class="chat-title">
+            <h3>{{rooms.activeRoom.$value}}</h3>
+        </div>
+        <div class="chat-body">
+            <div class="message-list" ng-repeat="messages in rooms.activeMessages">
+                <div ng-class-odd="'odd'" ng-class-even="'even'">
+                    <h5 class="username">{{messages.username}}</h5>
+                    <p class="sent-at">{{messages.sentAt}}</p>
+                    <br>
+                    <p class="content">{{messages.content}}</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

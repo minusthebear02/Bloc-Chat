@@ -1,5 +1,5 @@
-body {
-    margin: 0;
+body, section {
+    margin: -10px 0;
     padding: 0;
 }
 
@@ -16,7 +16,8 @@ body {
 }
 
 .chat-links {
-    margin-top: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
 }
 
 .chat-rooms h2 {
@@ -43,7 +44,7 @@ button.add-room {
     margin-left: 10px;
     border: none;
     background-color: whitesmoke;
-    padding: 10px;
+    padding: 9px;
     opacity: .7;
 }
 
@@ -52,4 +53,45 @@ button.add-room:hover {
     background-color: cornflowerblue;
     opacity: .4;
     
+}
+
+.chat-messages {
+    margin-left: 225px;
+}
+
+.chat-title {
+    font-family: 'Roboto';
+    margin-left: 5px;
+}
+
+.chat-body {
+    font-family: 'Roboto';
+}
+
+.username {
+    margin-bottom: 0;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.sent-at {
+    display: inline-block;
+    float: right;
+    font-size: 10px;
+    opacity: .7;
+    margin-top: 30px;
+    
+}
+
+.content {
+   font-size: 12px;
+}
+
+.odd {
+    background-color: whitesmoke;
+    padding: 0 5px 5px;
+}
+
+.even {
+    padding: 0 5px 5px;
 }

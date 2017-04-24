@@ -6,8 +6,7 @@
         $scope.submit = function() {
     
             if($scope.text) {
-                Room.addRoom(this.text);
-                $scope.text='';
+                Room.addRoom($scope.text);
                 $rootScope.modalInstance.close();
             }
             
@@ -16,5 +15,5 @@
     
     angular
         .module('blocChat')
-        .controller('AddRoomCtrl', ['$rootScope', '$uibModal', '$scope','Room', AddRoomCtrl])
+        .controller('AddRoomCtrl', ['$rootScope', '$uibModal', '$scope', 'Room', AddRoomCtrl])
 })();
