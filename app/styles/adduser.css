@@ -1,0 +1,21 @@
+.create-user {
+    font-family: 'Roboto';
+    display: inline;
+    border: none;
+    padding: 10px 27px;
+    background-color: white;
+    margin: 5px 5px;
+}
+
+.create-user:hover {
+    background-color: cornflowerblue;
+    opacity: .7;
+    cursor: pointer;
+    color: white;
+}
+
+#input {
+    height: 30px;
+    width: 220px;
+    margin: 10px 0 5px 3px;
+}

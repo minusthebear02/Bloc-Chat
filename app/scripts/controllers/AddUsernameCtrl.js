@@ -1,13 +1,14 @@
 (function() {
-    function AddRoomCtrl($uibModal, $scope, Room) {
+    function AddUsernameCtrl($rootScope, $uibModal, $scope, Room) {
         
         
         $scope.text = '';
         $scope.submit = function() {
     
             if($scope.text) {
-                Room.addRoom($scope.text);
+                Room.addUser($scope.text);
                 $scope.modalInstance.close();
+                
             }
             
         }
@@ -15,5 +16,5 @@
     
     angular
         .module('blocChat')
-        .controller('AddRoomCtrl', ['$uibModal', '$scope', 'Room', AddRoomCtrl])
+        .controller('AddUsernameCtrl', ['$rootScope', '$uibModal', '$scope', 'Room', AddUsernameCtrl])
 })();

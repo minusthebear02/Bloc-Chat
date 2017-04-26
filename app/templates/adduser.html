@@ -1,0 +1,20 @@
+<section ng-controller="AddUsernameCtrl">
+    <div class="modal">
+        <div class="modal-header">
+            <h3 class="modal-title">Create Username</h3>
+        </div>
+        <div class="modal-body">
+            <form ng-submit="submit()">
+                <label>
+                    Enter a Username:
+                </label>
+                <br>
+                    <input type="text" id="input" ng-model="text" name="text">
+                    <br>
+                   
+                    <input type="submit" class="create-user" value="Create Username">
+    
+            </form>
+        </div>
+    </div>
+</section>
