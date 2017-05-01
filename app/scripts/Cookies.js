@@ -3,6 +3,8 @@
 
         var currentUser = $cookies.get('blocChatCurrentUser');
         
+        console.log($cookies.get('blocChatCurrentUser'));
+        
         if (!currentUser || currentUser === '') {
            $rootScope.modalInstance = $uibModal.open({
                 animation: true,

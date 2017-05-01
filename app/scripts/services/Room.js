@@ -13,7 +13,9 @@
             },
             addUser: function(username) {
                 $cookies.put('blocChatCurrentUser', username);
-            } 
+            }
+            
+            
             
         };
     }

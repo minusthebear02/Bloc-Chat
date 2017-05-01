@@ -2,6 +2,7 @@
     <div class="chat-links">
         <h2>Bloc Chat</h2>
         <button class="add-room" ng-click="rooms.open()">Add Room</button>
+        <button class="log-out" ng-click="rooms.logOut()">Log Out</button>
         <div class="chat-room-list" ng-repeat="chat_room in rooms.roomList">
             <a ng-click="rooms.selectRoom(chat_room)">{{chat_room.$value}}</a>
         </div>
@@ -26,5 +27,16 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section ng-controller="AddMessageCtrl" class="new-message">
+    <div class="message-bar">
+        <form ng-submit="submit(rooms.activeRoom.$id)">
+            <input type="text" id="message-input" ng-model="text" name="text">
+
+            <input type="submit" class="send-button" value="Send">
+
+        </form>
     </div>
 </section>
