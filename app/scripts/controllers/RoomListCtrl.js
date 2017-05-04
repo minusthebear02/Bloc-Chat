@@ -1,14 +1,15 @@
 (function() {
     function RoomListCtrl($rootScope, $uibModal, $scope, $cookies, Room, Message) {
+        
         this.roomList = Room.all;
         
         this.activeRoom = {};
         
         this.activeMessages = null;
         
-        this.selectRoom = function(roomName) {
+        this.selectRoom = function(room) {
             
-            this.activeRoom = roomName;
+            this.activeRoom = room;
             this.activeMessages = Message.getByRoomId(this.activeRoom.$id);
         };
         
@@ -36,6 +37,8 @@
 
             });
         };
+        
+        
     }
     
     angular

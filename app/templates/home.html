@@ -17,12 +17,12 @@
             <h3>{{rooms.activeRoom.$value}}</h3>
         </div>
         <div class="chat-body">
-            <div class="message-list" ng-repeat="messages in rooms.activeMessages">
+            <div class="message-list" ng-repeat="message in rooms.activeMessages">
                 <div ng-class-odd="'odd'" ng-class-even="'even'">
-                    <h5 class="username">{{messages.username}}</h5>
-                    <p class="sent-at">{{messages.sentAt}}</p>
+                    <h5 class="username">{{message.username}}</h5>
+                    <p class="sent-at">{{message.sentAt | date: "h:mm" + " " + "a"}}</p>
                     <br>
-                    <p class="content">{{messages.content}}</p>
+                    <p class="content">{{message.content}}</p>
                     
                 </div>
             </div>
@@ -30,10 +30,10 @@
     </div>
 </section>
 
-<section ng-controller="AddMessageCtrl" class="new-message">
+<section ng-controller="AddMessageCtrl" class="new-message container">
     <div class="message-bar">
         <form ng-submit="submit(rooms.activeRoom.$id)">
-            <input type="text" id="message-input" ng-model="text" name="text">
+            <input type="text" id="message-input" ng-model="text" name="text" placeholder="Write a message...">
 
             <input type="submit" class="send-button" value="Send">
 

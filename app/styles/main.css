@@ -1,21 +1,31 @@
-html {
-    margin: -23px 0 0 -11px;;
+* {
+    margin: 0;
+    padding: 0;
+ }
+
+ui-view {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .chat-rooms {
     position: fixed;
     font-family: 'Roboto';
-    width: 25%;
-    height: 120%;
+    width: 290px;
+    height: 100%;
     background-color: lightgray;
     text-align: left;
     padding-left: 15px;
-    margin-left: 0;
 }
 
 .chat-links {
     margin-top: 20px;
-    padding-top: 20px;
 }
 
 .chat-rooms h2 {
@@ -69,7 +79,10 @@ button.log-out:hover {
 }
 
 .chat-messages {
-    margin-left: 26.2%;
+    font-family: 'Roboto';
+    margin-left: 305px;
+    width: calc(100% - 305px);
+    overflow: auto;
     
 }
 
@@ -80,12 +93,8 @@ button.log-out:hover {
     padding-top: 10px;
 }
 
-.chat-body {
-    font-family: 'Roboto';
-}
-
 .username {
-    margin: 20px 0 0 10px;
+    margin: 15px 0 0 10px;
     font-size: 16px;
     display: inline-block;
 }
@@ -102,6 +111,8 @@ button.log-out:hover {
 .content {
     font-size: 12px;
     margin-left: 20px;
+    padding: 9px;
+    flex-wrap: wrap;
 }
 
 .odd {
@@ -115,31 +126,28 @@ button.log-out:hover {
 
 .new-message {
     position: fixed;
-    top: 93.2%;
-    width: 74%;
-    margin-left: 26.2%;
-    padding-bottom: 0;
+    bottom: 0;
+    margin-left: 305px;
+    width: 70%;
+    width: calc(100% - 305px);
+    
 }
 
 #message-input {
-    position: relative;
-    height: 37px;
-    width: 91.2%;
-    
-    font-size: 18px;
+    padding-left: 10px;
+    height: 38px;
+    border: none;
+    border-top: 1px solid lightgrey;
+    width: 88.9%;
     
 }
 
 .send-button {
-    position: relative;
-    height:45px;
-    width: 8%;
-    padding-top: 13px;
-    margin-left: -4px;
+    height: 40px;
+    width: 6.5%;
     cursor: pointer;
     border: none;
     background-color: cornflowerblue;
-    padding: 9px;
     opacity: .7;
 }
 

@@ -4,21 +4,21 @@
         var messages = $firebaseArray(ref);
         
         var time = new Date();
-        var hour = time.getHours();
-        var min = time.getMinutes();
+        
+        
         
         
         return {
-      getByRoomId: function (roomId) {
-          ref = firebase.database().ref().child("messages");  
-        ref = ref.orderByChild('roomID').equalTo(roomId);
-        return $firebaseArray(ref);
+            getByRoomId: function (roomId) {
+                ref = firebase.database().ref().child("messages").orderByChild('roomID').equalTo(roomId);
+        
+                return $firebaseArray(ref);
           
       },
-           send: function(activeRoom, newMessage) {
+            send: function(activeRoom, newMessage) {
                 messages.$add({
                     content: newMessage,
-                    sentAt: hour + ':' + min,
+                    sentAt: time.getTime(),
                     username: $cookies.get('blocChatCurrentUser'),
                     roomID: activeRoom
                 })
